@@ -10,10 +10,6 @@ body {
   font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 }
 
-h1 {
-  font-size: 20px;
-}
-
 h1, h2 {
   margin: 0;
   font-weight: normal;
@@ -27,7 +23,6 @@ a {
 .container {
   width: calc(100% - 32px);
   margin: 0 auto;
-  /* outline: 2px solid red; */
 }
 
 
@@ -68,26 +63,45 @@ nav {
 /* main */
 
 .hero {
+  background: #ffefe0;
   justify-content: space-between;
   text-align: center;
+}
+
+.kozue {
+  border-radius: 10%;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .job {
   background: #b7ffb7;
   justify-content: space-between;
-  align-items: center;
-}
-
-.persona {
-  background: #b7ffff;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
 
 .wax {
+  background: #b7ffff;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.persona {
   background: #b7ffb7;
   justify-content: space-between;
-  align-items: center;
+  text-align: center;
+}
+
+.map {
+  text-align: center;
+}
+
+.datumou {
+  text-align: center;
+}
+
+.meet {
+  text-align: center;
 }
 
 footer {
@@ -99,19 +113,20 @@ footer {
 
 .circle {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   align-items: center;
   background-color: #ffe5e5;
   margin: 0 auto; 
   text-align: center;
+  transform: translateY(16px);
 }
 
 .circle-innner {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 57%;
+  left: 50%; 
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
