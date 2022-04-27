@@ -1,11 +1,22 @@
 /* common */
 
+span {
+  color:orange;
+}
+
 body {
   margin: 0;
+  color:#a5a5a5;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 }
 
 h1 {
+  font-size: 20px;
+}
+
+h1, h2 {
   margin: 0;
+  font-weight: normal;
 }
 
 a {
@@ -16,13 +27,14 @@ a {
 .container {
   width: calc(100% - 32px);
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
+
 
 /* header */
 
 header {
-  background: #ff9;
+  padding: 16px;
 }
 
 header .container {
@@ -36,41 +48,44 @@ nav {
   display: flex;
 }
 
+.menu {
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+.menu li {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .logo {
   display: flex;
   align-items: center;
 }
 
+
 /* main */
 
 .hero {
-  background: #b7ffff;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
 
 .job {
   background: #b7ffb7;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-span {
-  color:orange;
-}
-
 .persona {
   background: #b7ffff;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .wax {
   background: #b7ffb7;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -82,14 +97,21 @@ footer {
   color: #aaa;
 }
 
-
-.menu {
-  display: table;
-  table-layout: fixed;
+.circle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  align-items: center;
+  background-color: #ffe5e5;
+  margin: 0 auto; 
   text-align: center;
-  width: 100%;
 }
-.menu li {
-  display: table-cell;
-  vertical-align: middle;
+
+.circle-innner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
