@@ -21,10 +21,20 @@ a {
 }
 
 .container {
-  width: calc(100% - 32px);
-  margin: 0 auto;
+  /* width: calc(100% / 2 ); */
+  /* margin: 0 auto; */
   max-width: 1000px;
 }
+
+.meet {
+  width: calc(100% - 32px);
+  /* width: calc(100% / 2 ); */
+  margin: 0 auto;
+  max-width: 1000px;
+  /* outline: red 1px solid; */
+}
+
+
 
 /* header */
 
@@ -62,53 +72,139 @@ nav {
 
 /* main */
 
+/* トップ */
 .hero {
   background: #ffefe0;
   justify-content: space-between;
   text-align: center;
-  outline: red 1px solid;
+  /* outline: red 1px solid; */
+}
+
+.hero h1 {
+  padding-top: 40px;
+}
+
+.hero .container {
+  align-items: center;
+}
+
+.hero .container .desc {
+  background: #ffe5e5;
+  border-radius: 50%;
+}
+
+.hero .container .desc h2 {
+  padding-top: 16px;
+   padding-bottom: 16px;
+}
+
+.hero .container .desc p {
+ padding-bottom: 40px;
 }
 
 .kozue {
-  border-radius: 10%;
-  margin-top: 32px;
-  margin-bottom: 16px;
+  border-radius: 5%;
+  object-fit: cover;
 }
 
+/* こんな人 */
+.story {
+  background: #fff;
+  justify-content: space-between;
+  text-align: center;
+  padding: 48px 0;
+}
+
+.story .container {
+  align-items: center;
+}
+
+.story .container .desc {
+  background: #ffe5e5;
+}
+
+.story .container .desc h2, p {
+ padding-bottom: 16px;
+}
+
+.kozue02 {
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+/* こずえができる事 */
 .job {
-  background: #b7ffb7;
+  background: #fff;
   justify-content: space-between;
   text-align: center;
   padding: 48px 0;
 }
 
-.job .desc {
-  outline: red 1px solid;
+.job .container {
+  align-items: center;
 }
 
+.job .container .desc {
+  background: #ffe5e5;
+  border-radius: 50%;
+}
+
+.job .container .desc h2 {
+  padding-top: 16px;
+   padding-bottom: 16px;
+}
+
+.job .container .desc p {
+ padding-bottom: 16px;
+}
+
+/* ブラジリアンワックスとは */
 .wax {
-  background: #b7ffff;
+  background: #fff;
   justify-content: space-between;
   text-align: center;
   padding: 48px 0;
 }
 
+.wax h2 {
+  padding-bottom: 40px;
+}
+
+.wax .container {
+  align-items: center;
+}
+
+/* .wax .bsw {} */
+
+/* こんなアナタにおすすめ */
 .persona {
-  background: #b7ffb7;
+  background: #fff;
   justify-content: space-between;
   text-align: center;
   padding: 48px 0;
 }
 
+.persona .container {
+  align-items: center;
+}
+
+/* 口コミ */
 .voices {
   /* text-align: center; */
-  padding: 48px 0;
+  padding: 32px 0;
   background: #ffefe0;
+  border-radius: 16px;
+  margin-top: 16px;
 }
 
 .voices h2 {
   padding-bottom: 32px;
   text-align: center;
+}
+
+.voices .container {
+  margin: 0 auto;
+  width: calc(100% - 32px);
 }
 
 .voices section {
@@ -128,6 +224,11 @@ nav {
   margin-top: 16px;
 }
 
+.status {
+  font-size: 15px;
+}
+
+/* 会いに行く */
 .meet {
   text-align: center;
   padding: 48px 0;
@@ -162,9 +263,14 @@ nav {
   padding: 48px 0;
 }
 
+/* いらすとやとフッター */
 .datumou {
   text-align: center;
-  margin-bottom: 32px;
+  /* margin-bottom: 8px; */
+}
+
+.datumou p {
+  margin: 0;
 }
 
 .copy {
@@ -175,30 +281,13 @@ nav {
 }
 
 
-.circle {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  align-items: center;
-  background-color: #ffe5e5;
-  margin: 24px auto; 
-  text-align: center;
-  transform: translateY(16px);
-}
-
-.circle-innner {
-  transform: translateY(-400px);
-  /* position: absolute;
-  top: 57%;
-  left: 50%; 
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
-}
-
 /* large screen  */
 
 @media (min-width: 600px) {
+
+  .container {
+    margin: 0 auto;
+  }
 
   .hero .container {
     display: flex;
@@ -209,13 +298,42 @@ nav {
     width: 50%;
   }
 
-  .main section {
+  .story .container {
     display: flex;
-    align-items: center;
+    flex-flow: row-reverse;
+  }
+  
+  .story .desc,
+  .story .pic {
+    width: 50%;
+  }
+  
+  .job .container {
+    display: flex;
   }
 
-  .main .wax {
-    flex-direction: row-reverse;
+  .job .desc,
+  .job .pic {
+    width: 50%;
+  }
+
+  .wax .container {
+    display: flex;
+    /* flex-flow: row-reverse; */
+  }
+
+  .wax .desc,
+  .wax .pic {
+    width: 50%;
+  }
+
+  .persona .container {
+    display: flex;
+  }
+
+  .persona .desc,
+  .persona .pic {
+    width: 50%;
   }
 
   .voices .container {
@@ -234,4 +352,22 @@ nav {
     justify-content: space-between;
   }
 
+  .meet {
+    display: flex;
+  }
+  
+  .meet .desc {
+    margin-top: 24px;
+  }
+
+  .meet .desc,
+  .meet .pic {
+    width: 50%;
+  }
+  
+}
+
+
+section {
+  outline: red 1px solid;
 }
