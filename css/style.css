@@ -77,11 +77,11 @@ nav {
   background: #ffefe0;
   justify-content: space-between;
   text-align: center;
-  padding: 16px;
+  padding: 8px;
 }
 
 .hero h1 {
-  padding-top: 40px;
+  padding-top: 16px;
 }
 
 .hero .container {
@@ -99,12 +99,14 @@ nav {
 }
 
 .hero .container .desc p {
- padding-bottom: 40px;
+  padding-top: 32px;
+  padding-bottom: 40px;
 }
 
-.kozue {
+.hero .container .pic .kozue {
   border-radius: 5%;
-  object-fit: cover;
+  width: calc(100% - 48px);
+  max-width: 300px;
 }
 
 /* こんな人 */
@@ -126,6 +128,8 @@ nav {
 .story .container .desc {
   background: #ffe5e5;
   margin: 0 8px 0 8px;
+  padding: 16px 0;
+  padding-bottom: 0;
 }
 
 .story .container .desc h2, p {
@@ -134,7 +138,7 @@ nav {
 
 .kozue02 {
   border-radius: 5%;
-  object-fit: cover;
+  width: calc(100% - 16px) ;
 }
 
 /* こずえができる事 */
@@ -159,7 +163,11 @@ nav {
 }
 
 .job .container .desc p {
- padding-bottom: 16px;
+  padding-bottom: 16px;
+}
+
+.job .container .pic .job {
+  width: calc(100% - 32px) ;
 }
 
 /* ブラジリアンワックスとは */
@@ -171,25 +179,64 @@ nav {
 
 .wax .midasi {
   background: #ffe5e5;
+  padding: 16px;
 }
 
 .wax .container {
   align-items: center;
 }
 
-/* .wax .bsw {} */
+.wax .container .pic .bsw {
+  width: 100% ;
+}
 
-/* こんなアナタにおすすめ */
+.wax .container .desc h2 {
+  font-size: 20px;
+  padding-top: 16px;
+}
+
+/* 何がチガウの？ */
 .persona {
   background: #ffefe0;
   justify-content: space-between;
   text-align: center;
-  padding: 48px 0;
+  padding: 16px 0;
 }
 
 .persona .container {
   align-items: center;
 }
+
+.persona .container .pic .merit {
+  width: 100%;
+}
+
+.persona h2 {
+  padding: 16px;
+}
+
+/* 写真 */
+.picture {
+  background: #ffe5e5;
+  text-align: center;
+}
+
+.picture .container {
+  align-items: center;
+  padding: 0;
+}
+
+/* .picture .container .decs p {
+  margin-top: 8px;
+} */
+
+.picture .container .pic .home {
+  border-radius: 10%;
+  width: calc(100% - 32px);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
 
 /* 口コミ */
 .voices {
@@ -197,7 +244,7 @@ nav {
   padding: 32px 0;
   background: #ffefe0;
   border-radius: 16px;
-  margin-top: 16px;
+  margin: 16px 8px 0 8px;
 }
 
 .voices h2 {
@@ -288,8 +335,16 @@ nav {
 
 @media (min-width: 600px) {
 
+  .br-sp {
+    display: none; 
+  }
+
   .container {
     margin: 0 auto;
+  }
+
+  .hero h1 {
+    padding-bottom: 16px;
   }
 
   .hero .container {
@@ -299,7 +354,14 @@ nav {
   .hero .desc,
   .hero .pic {
     width: 50%;
+    text-align: center;
   }
+
+  /* .hero .container .desc {
+    max-width: 400px;
+  } */
+
+  /* .hero .container .desc {} */
 
   .story .container {
     display: flex;
@@ -344,6 +406,16 @@ nav {
 
   .persona .desc,
   .persona .pic {
+    width: 50%;
+  }
+
+  .picture .container {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  .picture .desc,
+  .picture .pic {
     width: 50%;
   }
 
